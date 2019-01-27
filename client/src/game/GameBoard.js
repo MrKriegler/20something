@@ -50,7 +50,7 @@ class GameBoard extends Component {
   renderJoinLink() {
     if (!Boolean(this.props.game.detective)) {
       return(
-        <SubHeaderText>To invite a detective to join send them this link http://localhost:3000/join/{this.props.gameId}</SubHeaderText>
+        <SubHeaderText>To invite a detective to join send them this link http://localhost:1337/join/{this.props.gameId}</SubHeaderText>
       )
     }
     return (<SubHeaderText>A detective has joined. Good luck to you both!</SubHeaderText>)

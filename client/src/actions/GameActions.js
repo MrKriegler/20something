@@ -17,7 +17,7 @@ export const endCreateGame = data =>  {
 }
 
 export const createGame = data => dispatch => {
-    let url = "http://localhost:3001/api/v1/games"
+    let url = `${process.env['REACT_APP_API_URL']}/api/v1/games`
     axios.post(url, data).then(
         (response) => {
             const data = response.data
@@ -30,7 +30,7 @@ export const createGame = data => dispatch => {
 }
 
 export const getGame = id => dispatch => {
-  let url = `http://localhost:3001/api/v1/games/${id}`
+  let url = `${process.env['REACT_APP_API_URL']}/api/v1/games/${id}`
   axios.get(url).then(
       (response) => {
           const data = response.data

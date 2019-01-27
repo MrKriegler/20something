@@ -10,16 +10,19 @@ Thanks for sending me the test project. I really enjoyed building this game whic
 I really put a lot of effort into the test project as I would like to show you what I know in a usable manner.
 Its this reason I did 2 of my API calls in a RESTFUL manner and the rest through the socket server.
 I also decided to build a basic state machine for the game, its not really needed at the moment but as I work on the game
-it will make adding rules between states easier.
+I think it will make adding rules between game states easier.
 
 There are improvements to be made and I will definitely keep working on the project to make them in the future but I am happy with the
 result
 
 I decided to use Nodejs, REACT, Redux and Mongodb for my stack as its one I have worked with before besides REACT.
 I am more of a VUEjs user but after reading that you use REACT-NATIVE (although not 100% the same) I decided to build the frontend
-in REACT with REDUX to help me communicate easier with the socket server. I did this by adding redux middleware to handle socket events.
+in REACT with REDUX. I made it easier to talk to the websockets by adding a redux middleware to handle socket events.
 
-Thanks again
+If I had more time I would ideally like to write some tests and will be doing so in the future to make it easier to contribute to.
+I like to use mocha and chai when testing the api and cypress for the front end. I have been investigating jest as well.
+
+Thanks again and I look forward to your feedback
 
 ## Run Game
 

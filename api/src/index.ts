@@ -12,7 +12,7 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 const io = require('socket.io')(server, {
-  origins: ['http://localhost:1337', 'http://localhost:3000'],
+  origins: [process.env['FRONT_END_URL'], 'http://localhost:3000'],
   path: '/ws'
 });
 io.of('/games')

@@ -20,7 +20,7 @@ I am more of a VUEjs user but after reading that you use REACT-NATIVE (although 
 in REACT with REDUX. I made it easier to talk to the websockets by adding a redux middleware to handle socket events.
 
 If I had more time I would ideally like to write some tests and will be doing so in the future to make it easier to contribute to.
-I like to use mocha and chai when testing the api and cypress for the front end. I have been investigating jest as well.
+I like to use mocha and chai when testing the api and cypress for the front end.
 
 Thanks again and I look forward to your feedback
 

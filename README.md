@@ -8,7 +8,7 @@ can ask 20 yes/no questions to try see what the secret is. The detective can gue
 Thanks for sending me the test project. I really enjoyed building this game which took up most of my time over the weekend.
 
 I really put a lot of effort into the test project as I would like to show you what I know in a usable manner.
-Its this reason I did 2 of my API calls in a RESTFUL manner and the rest through the socket server.
+Because of this I created 2 of my API calls in a RESTFUL manner and the others through the socket server.
 I also decided to build a basic state machine for the game, its not really needed at the moment but as I work on the game
 I think it will make adding rules between game states easier.
 

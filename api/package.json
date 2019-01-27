@@ -1,0 +1,45 @@
+{
+  "name": "20Something",
+  "version": "1.0.0",
+  "description": "Game of questions to guess the word",
+  "main": "index.js",
+  "scripts": {
+    "tests": "mocha --require ts-node/register --require tsconfig-paths/register --require source-map-support/register --recursive tests/**/*.spec.ts",
+    "start": "npm run build:live",
+    "build:live": "\"ts-node\" --require tsconfig-paths/register src/index.ts && node -r dotenv/config"
+  },
+  "keywords": [],
+  "author": "Noel Kriegler <n.kriegler@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/chai-http": "^3.0.5",
+    "@types/chance": "^1.0.1",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.15",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "chance": "^1.0.18",
+    "mocha": "^5.2.0",
+    "superagent": "^4.0.0",
+    "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.7.0",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "@types/debug": "0.0.31",
+    "@types/express": "^4.16.0",
+    "@types/mongoose": "^5.3.5",
+    "@types/morgan": "^1.7.35",
+    "@types/socket.io": "^2.1.2",
+    "body-parser": "^1.18.3",
+    "debug": "^4.1.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.0",
+    "morgan": "^1.9.1",
+    "reflect-metadata": "^0.1.12",
+    "socket.io": "^2.2.0",
+    "type-graphql": "^0.15.0"
+  }
+}

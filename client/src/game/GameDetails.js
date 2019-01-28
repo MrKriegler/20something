@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
-
+import {Redirect} from 'react-router-dom'
 import detective from '../detective.png'
 import ninja from '../ninja.png'
 import { sendMessage, getMessages, addOwnMessage, } from '../actions/MessageActions'
@@ -9,6 +10,10 @@ import { getGame, joinGame, subscribeToGame, attachGameListener, guessAnswer } f
 
 
 class GameBoard extends Component {
+
+  state = {
+    guess: ''
+  }
 
   handleChange = input => e => {
     this.setState({
@@ -22,9 +27,14 @@ class GameBoard extends Component {
     this.props.guessAnswer({guess, gameId: gameId})
   }
 
+  handleNewGame = () => e => {
+    this.props.history.push('/')
+  }
+
   render() {
     const user = JSON.parse(sessionStorage.getItem('user'))
     const { game, nextTurn } = this.props
+
     return (
     <GameDetails>
       <Title>Game Details</Title>
@@ -51,6 +61,9 @@ class GameBoard extends Component {
           </GameDetailsBlock>
         </div> : ''
       }
+      <GameDetailsBlock>
+            <Button onClick={this.handleNewGame()} >New game</Button>
+      </GameDetailsBlock>
     </GameDetails>
     )
   }
@@ -74,5 +87,5 @@ const mapDispatchToProps = dispatch => ({
   joinGame: (id) => dispatch(joinGame(id))
  })
 
-export default connect(mapStateToProps, mapDispatchToProps)(GameBoard)
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(GameBoard))
 

@@ -2,6 +2,7 @@ import * as http from 'http';
 import { GameWebSocketServer } from './websockets/GameWebsockets'
 import debug from 'debug';
 import Server from './server';
+import {FRONT_END_URL} from '@20something/lib/common'
 debug('ts-express:server');
 
 const port = normalizePort(process.env.PORT || 3001);
@@ -12,7 +13,7 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 const io = require('socket.io')(server, {
-  origins: [process.env['FRONT_END_URL'], 'http://localhost:3000'],
+  origins: [FRONT_END_URL, 'http://localhost:3000'],
   path: '/ws'
 });
 io.of('/games')

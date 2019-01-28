@@ -105,9 +105,14 @@ export class GameManager {
 
     let state = constructGameState(game);
 
+    if (state.game.status === 'new') {
+      return throwError(ERRORS.EINVALID, `Could you kindly wait for the detective to join before you start, thanks.`);
+    }
+
     if (state.game.status !== 'inprogress') {
       return throwError(ERRORS.EINVALID, `Although I admire your tenacity the game seems to have ended. Kindly go play another one!`);
     }
+
     if (state.game.nextTurn !== payload.message.role) {
       return throwError(ERRORS.EINVALID, `Terribly sorry but I have to ask you to please wait you turn.`);
     }

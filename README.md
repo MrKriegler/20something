@@ -26,11 +26,17 @@ Thanks again and I look forward to your feedback
 
 ## Run Game
 
+ENV files for the frontend are found in `/client/.env`.
+ENV files for the backend can be set in the `docker-compose.yml`
+
 Install [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/)
 
 ```bash
 docker-compose
 ```
+
+I am using the [wait-for-it.sh](https://github.com/vishnubob/wait-for-it/blob/master/wait-for-it.sh) for the api to wait for mongodb to accept connections before spinning up.
+
 ### Directory layout
     .
     ├───api                       #Node api

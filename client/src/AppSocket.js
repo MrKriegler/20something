@@ -6,7 +6,6 @@ export default function socketMiddleware() {
   })
 
   return ({ dispatch }) => next => (action) => {
-    console.log(action);
     if (typeof action === 'function') {
       return next(action)
     }

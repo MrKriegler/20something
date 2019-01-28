@@ -64,6 +64,16 @@ I am using the [wait-for-it.sh](https://github.com/vishnubob/wait-for-it/blob/ma
             ├───messages
             │   └───styles
             └───reducers
+
+The main business logic of the game in the API sits in the `GameManager`. The `GameManager` manages the state of the game while using the store for CRUD into mongo. The `GameManager` is used by both the `GameController` and `GameWebsockets`.
+
+The Game states are as follows.
+
+- create: This is as the game is created and sets the initial values for the game.
+- new: This is set as the ninja joins the game and is waiting for the detective to join.
+- inprogress: This is set as the detective joins the game and starts the game.
+- closed: This is set when the detective either wins or loses.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

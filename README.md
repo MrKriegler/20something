@@ -32,6 +32,7 @@ ENV files for the backend can be set in the `docker-compose.yml`
 Install [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/)
 
 ```bash
+cd 20something/
 docker-compose
 ```
 

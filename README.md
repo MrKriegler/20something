@@ -36,6 +36,8 @@ cd 20something/
 docker-compose
 ```
 
+Open [http://localhost:1337](http://localhost:1337)
+
 I am using the [wait-for-it.sh](https://github.com/vishnubob/wait-for-it/blob/master/wait-for-it.sh) for the api to wait for mongodb to accept connections before spinning up.
 
 ### Directory layout
